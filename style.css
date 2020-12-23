@@ -5,17 +5,29 @@
 }
 
 body {
+    background-color: #708ED2;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
-.movie-container {
-    width: 100px;
-    height: 100px;
+.movie {
+    background-color: #373B69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
 }
 
-.movie-img {
-    background-color: #373B69;
-    width: 50px;
-    height: 50px;
+.movie img {
+    max-width: 100%;
+}
+
+.movie-info {
+    color: #EBE5E2;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.movie-info h3 {
+    margin: 0;
 }
