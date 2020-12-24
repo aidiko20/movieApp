@@ -10,6 +10,34 @@ body {
     margin: 0;
 }
 
+header {
+    background-color: #373B69;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #708ED2;
+    border-radius: 50px;
+    color: #EBE5E2;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #708ED2;
+}
+
+.search:focus {
+    background-color: #373B69;
+    outline: none;
+
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +47,7 @@ main {
     background-color: #373B69;
     border-radius: 3px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     margin: 1rem;
     width: 300px;
 }
