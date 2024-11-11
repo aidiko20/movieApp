@@ -3,13 +3,13 @@ flowchart LR
     
     subgraph sg [Security Group]
         direction TB
-        inbound[Inbound Rule:\nPort 80\nSource: 0.0.0.0/0]
+        inbound[Inbound Rule:\nPort 80 Source: 0.0.0.0/0]
     end
     
     subgraph ec2 [EC2 Instance]
         direction TB
-        nginx[Nginx Web Server\nPort 80]
-        app[JavaScript App\nMovie Reviews]
+        nginx[Nginx Web Server Port 80]
+        app[JavaScript App Movie Reviews]
         nginx --> app
     end
     
