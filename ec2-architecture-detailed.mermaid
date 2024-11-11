@@ -3,7 +3,7 @@ flowchart LR
     
     subgraph sg [Security Group]
         direction TB
-        inbound[Inbound Rule:\nPort 80 Source: 0.0.0.0/0]
+        inbound[Inbound Rule:  Port 80 Source: 0.0.0.0/0]
     end
     
     subgraph ec2 [EC2 Instance]
@@ -13,7 +13,7 @@ flowchart LR
         nginx --> app
     end
     
-    internet -->|HTTP Traffic\nPort 80| sg
+    internet -->|HTTP Traffic  Port 80| sg
     sg --> ec2
     
     classDef sgStyle fill:#ff9900,stroke:#232F3E,stroke-width:2px;
