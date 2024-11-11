@@ -1,0 +1,27 @@
+flowchart LR
+    internet((Internet))
+    
+    subgraph sg [Security Group]
+        direction TB
+        inbound[Inbound Rule:\nPort 80\nSource: 0.0.0.0/0]
+    end
+    
+    subgraph ec2 [EC2 Instance]
+        direction TB
+        nginx[Nginx Web Server\nPort 80]
+        app[JavaScript App\nMovie Reviews]
+        nginx --> app
+    end
+    
+    internet -->|HTTP Traffic\nPort 80| sg
+    sg --> ec2
+    
+    classDef sgStyle fill:#ff9900,stroke:#232F3E,stroke-width:2px;
+    classDef ec2Style fill:#232F3E,stroke:#ff9900,stroke-width:2px,color:white;
+    classDef componentStyle fill:#3F8624,stroke:#232F3E,stroke-width:2px,color:white;
+    classDef internetStyle fill:#85B5D9,stroke:#232F3E,stroke-width:2px;
+    
+    class sg sgStyle;
+    class ec2 ec2Style;
+    class nginx,app componentStyle;
+    class internet internetStyle;
